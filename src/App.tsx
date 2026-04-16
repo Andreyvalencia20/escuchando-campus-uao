@@ -8,6 +8,7 @@ import type { Zone, Category } from './types';
 import zonesData from './data/zones.json';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
+import DeviceShowcase from './components/DeviceShowcase';
 import ZoneCards from './components/ZoneCards';
 import CampusMap from './components/CampusMap';
 import Map3DViewer from './components/Map3DViewer';
@@ -100,6 +101,8 @@ function HomePage() {
       </Box>
 
       {/* Zone Cards */}
+      <DeviceShowcase />
+
       <Box ref={zonesRef}>
         <ZoneCards zones={zones} onZoneClick={handleZoneClick} />
       </Box>

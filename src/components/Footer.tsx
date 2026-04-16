@@ -34,8 +34,9 @@ const footerSections: FooterSection[] = [
   {
     title: 'Licencias',
     links: [
-      { label: 'Código: Licencia MIT', action: 'external', target: 'https://opensource.org/licenses/MIT' },
+      { label: 'Código: Licencia MIT', action: 'external', target: 'https://github.com/Andreyvalencia20/escuchando-campus-uao/blob/main/LICENSE' },
       { label: 'Recursos: Creative Commons (CC BY)', action: 'external', target: 'https://creativecommons.org/licenses/by/4.0/deed.es' },
+      { label: 'Repositorio en GitHub', action: 'external', target: 'https://github.com/Andreyvalencia20/escuchando-campus-uao' },
     ],
   },
   {
