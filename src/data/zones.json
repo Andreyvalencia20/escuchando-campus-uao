@@ -1,0 +1,129 @@
+[
+  {
+    "id": "zonas-verdes",
+    "name": "Zonas Verdes (Lago y Acacias)",
+    "category": "recreativo",
+    "description": "Amplios jardines y senderos rodeados de naturaleza tropical. Los estudiantes descansan bajo la sombra de los árboles, leen o simplemente disfrutan del canto de los pájaros y la brisa caleña. Un oasis verde en medio de la vida académica.",
+    "images": [
+      "/media/zonas-verdes/lago.jpeg",
+      "/media/zonas-verdes/zona-verde.jpeg"
+    ],
+    "audio": "/media/zonas-verdes/ambiente.ogg",
+    "audioDescription": "Naturaleza: canto de aves, brisa y hojas moviéndose",
+    "mapPosition": {
+      "x": 1646,
+      "y": 564
+    },
+    "panoScene": "pano5795",
+    "videos": [
+      "/media/zonas-verdes/lago-video.mp4"
+    ]
+  },
+  {
+    "id": "cafeteria",
+    "name": "Cafetería",
+    "category": "social",
+    "description": "La cafetería es un hervidero de vida social. El aroma del café recién hecho se mezcla con las conversaciones entre clases. Bandejas, cubiertos y el sonido del microondas forman parte de la banda sonora de este espacio esencial del campus.",
+    "images": [
+      "/media/cafeteria/cafeteria-1.jpeg",
+      "/media/cafeteria/cafeteria-2.jpeg"
+    ],
+    "audio": "/media/cafeteria/ambiente.ogg",
+    "audioDescription": "Cafetería: conversaciones, cubiertos y máquinas de café",
+    "mapPosition": {
+      "x": 2065,
+      "y": 822
+    },
+    "panoScene": "pano5796",
+    "videos": [
+      "/media/cafeteria/cafeteria-video.mp4"
+    ]
+  },
+  {
+    "id": "sotanos",
+    "name": "Sótanos",
+    "category": "academico",
+    "description": "Los sótanos de la UAO albergan laboratorios especializados, salas de estudio y espacios de investigación. Un área silenciosa donde los estudiantes encuentran concentración y herramientas técnicas para sus proyectos académicos. El eco de los pasos y el zumbido de los equipos crean una atmósfera única de trabajo intelectual.",
+    "images": [
+      "/media/sotanos/sotanos.jpeg"
+    ],
+    "videos": [
+      "/media/sotanos/sotanos-video.mp4"
+    ],
+    "audio": "/media/sotanos/ambiente.ogg",
+    "audioDescription": "Sótanos: ecos, pasos y zumbido de equipos",
+    "mapPosition": {
+      "x": 1019,
+      "y": 838
+    },
+    "panoScene": "pano439"
+  },
+  {
+    "id": "biblioteca",
+    "name": "Biblioteca",
+    "category": "academico",
+    "description": "La Biblioteca de la UAO es un espacio de conocimiento y silencio productivo. Rodeada de amplias mesas de estudio y colecciones especializadas, sus pasillos ofrecen un refugio para la concentración. El sonido de páginas al pasar y el tecleo suave de portátiles conforman su identidad sonora.",
+    "images": [
+      "/media/previews-hd/biblioteca.jpg"
+    ],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": {
+      "x": 725,
+      "y": 999
+    },
+    "panoScene": "pano313",
+    "hideGallery": true
+  },
+  {
+    "id": "plazoleta-central",
+    "name": "Plazoleta Central (Plaza Ágora)",
+    "category": "social",
+    "description": "El corazón social del campus, donde convergen estudiantes de todas las facultades. Entre bancas de concreto y árboles frondosos, se escuchan risas, conversaciones animadas y el paso constante de personas. Es el punto de encuentro por excelencia de la vida universitaria.",
+    "images": [
+      "/media/previews-hd/plazoleta.jpg"
+    ],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": {
+      "x": 1019,
+      "y": 838
+    },
+    "panoScene": "pano423",
+    "hideGallery": true
+  },
+  {
+    "id": "canchas-deportivas",
+    "name": "Canchas Deportivas",
+    "category": "deportivo",
+    "description": "Las canchas deportivas de la UAO son un espacio de energía pura. Balones rebotando, silbatos del entrenador y gritos de ánimo llenan el aire. Aquí se forja el espíritu competitivo y la camaradería entre los estudiantes que practican fútbol, baloncesto y voleibol.",
+    "images": [
+      "/media/previews-hd/canchas.jpg"
+    ],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": {
+      "x": 2610,
+      "y": 902
+    },
+    "panoScene": "pano8388",
+    "hideGallery": true
+  },
+  {
+    "id": "auditorio",
+    "name": "Auditorio Quincha",
+    "category": "academico",
+    "description": "El auditorio Quincha de la UAO es escenario de conferencias, graduaciones y eventos culturales. Su acústica envolvente y sus butacas crean una atmósfera solemne. El eco de los aplausos y las voces amplificadas definen su carácter.",
+    "images": [
+      "/media/previews-hd/auditorio.jpg"
+    ],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": {
+      "x": 862,
+      "y": 1160
+    },
+    "panoScene": "pano233",
+    "hideGallery": true
+  }
+]
