@@ -58,7 +58,7 @@ const footerSections: FooterSection[] = [
         target: '/creditos',
       },
       {
-        label: 'Centro de Innovación TIC',
+        label: 'Bienestar Universitario',
         action: 'route',
         target: '/creditos',
       },
@@ -94,7 +94,6 @@ export default function Footer() {
     >
       <Container maxWidth="lg">
         <Grid container spacing={5}>
-          {/* Brand column */}
           <Grid size={{ xs: 12, md: 3 }}>
             <Typography
               sx={{
@@ -105,7 +104,7 @@ export default function Footer() {
                 mb: 2,
               }}
             >
-              Campus UAO
+              Deporte UAO
             </Typography>
             <Typography
               sx={{
@@ -115,13 +114,12 @@ export default function Footer() {
                 maxWidth: 260,
               }}
             >
-              Recorrido virtual inmersivo de la Universidad Autónoma de
-              Occidente. Panoramas 360°, identidad sonora y mapa
-              interactivo.
+              Recorrido virtual inmersivo del centro deportivo y de bienestar
+              de la Universidad Autónoma de Occidente. Gimnasio, yoga y mucho
+              más en 360°.
             </Typography>
           </Grid>
 
-          {/* Link columns */}
           {footerSections.map((section) => (
             <Grid key={section.title} size={{ xs: 6, sm: 4, md: 3 }}>
               <Typography
@@ -176,7 +174,6 @@ export default function Footer() {
           }}
         />
 
-        {/* Bottom copyright row */}
         <Stack
           direction={{ xs: 'column', sm: 'row' }}
           justifyContent="space-between"
@@ -189,7 +186,7 @@ export default function Footer() {
               fontSize: '0.82rem',
             }}
           >
-            © {new Date().getFullYear()} Campus UAO. Todos los derechos
+            © {new Date().getFullYear()} Deporte UAO. Todos los derechos
             reservados.
           </Typography>
           <Typography

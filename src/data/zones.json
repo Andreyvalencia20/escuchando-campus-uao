@@ -110,6 +110,22 @@
     "hideGallery": true
   },
   {
+    "id": "gimnasio",
+    "name": "Gimnasio",
+    "category": "deportivo",
+    "description": "Zona de bienestar y deporte del campus. Incluye sala de gimnasio con equipos de entrenamiento, salón de yoga, sala de estiramiento, casilleros y áreas de descanso. Recorre cada espacio en 360°.",
+    "images": [],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": {
+      "x": 2900,
+      "y": 950
+    },
+    "panoScene": "2-gym",
+    "hideGallery": true,
+    "tourBaseUrl": "/gym-tour/"
+  },
+  {
     "id": "auditorio",
     "name": "Auditorio Quincha",
     "category": "academico",

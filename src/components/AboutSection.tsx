@@ -6,31 +6,31 @@ import Grid from '@mui/material/Grid';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import HearingOutlinedIcon from '@mui/icons-material/HearingOutlined';
+import FitnessCenterOutlinedIcon from '@mui/icons-material/FitnessCenterOutlined';
 import ThreeSixtyOutlinedIcon from '@mui/icons-material/ThreeSixtyOutlined';
-import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
+import SelfImprovementOutlinedIcon from '@mui/icons-material/SelfImprovementOutlined';
 import DevicesOutlinedIcon from '@mui/icons-material/DevicesOutlined';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   {
-    icon: <HearingOutlinedIcon sx={{ fontSize: 30 }} />,
+    icon: <FitnessCenterOutlinedIcon sx={{ fontSize: 30 }} />,
     number: '01',
-    title: 'Identidad sonora',
-    description: 'Cada zona posee un paisaje sonoro único capturado in situ, que refleja la atmósfera real del espacio universitario.',
+    title: 'Espacios deportivos',
+    description: 'Gimnasio, salón de yoga, sala de estiramiento, casilleros y áreas de descanso del centro deportivo de la UAO, capturados en alta resolución.',
   },
   {
     icon: <ThreeSixtyOutlinedIcon sx={{ fontSize: 30 }} />,
     number: '02',
-    title: 'Recorrido interactivo',
-    description: 'Panoramas 360° de alta resolución que permiten explorar cada rincón del campus desde cualquier dispositivo.',
+    title: 'Recorrido 360° inmersivo',
+    description: 'Panoramas interactivos que te permiten explorar cada rincón del centro deportivo desde cualquier dispositivo, sin estar físicamente allí.',
   },
   {
-    icon: <MapOutlinedIcon sx={{ fontSize: 30 }} />,
+    icon: <SelfImprovementOutlinedIcon sx={{ fontSize: 30 }} />,
     number: '03',
-    title: 'Mapa del campus',
-    description: 'Navegación visual con un mapa interactivo que conecta todas las zonas y puntos de interés del campus.',
+    title: 'Bienestar integral',
+    description: 'Mostramos los espacios donde la comunidad UAO entrena el cuerpo y la mente: fuerza, flexibilidad, descanso y socialización deportiva.',
   },
   {
     icon: <DevicesOutlinedIcon sx={{ fontSize: 30 }} />,
@@ -41,10 +41,10 @@ const features = [
 ];
 
 const stats = [
-  { value: 500, prefix: '+', suffix: '', label: 'Puntos panorámicos' },
-  { value: 6, prefix: '', suffix: '', label: 'Zonas interactivas' },
+  { value: 7, prefix: '', suffix: '', label: 'Áreas deportivas' },
+  { value: 7, prefix: '', suffix: '', label: 'Panoramas 360°' },
   { value: 360, prefix: '', suffix: '°', label: 'Visión completa' },
-  { value: 100, prefix: '', suffix: '%', label: 'Recursos libres' },
+  { value: 100, prefix: '', suffix: '%', label: 'Acceso libre' },
 ];
 
 function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.2) {
@@ -80,7 +80,6 @@ export default function AboutSection() {
 
   return (
     <Box ref={sectionRef} id="about">
-      {/* Stats banner */}
       <Box
         ref={statsRef}
         sx={{
@@ -118,7 +117,6 @@ export default function AboutSection() {
         </Container>
       </Box>
 
-      {/* Features - horizontal timeline style */}
       <Box sx={{ py: { xs: 8, md: 14 }, bgcolor: '#FAFAFA', position: 'relative' }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 10 } }}>
@@ -126,11 +124,10 @@ export default function AboutSection() {
               Sobre el proyecto
             </Typography>
             <Typography sx={{ color: '#1B1B1B', fontWeight: 800, fontSize: { xs: '2rem', md: '3rem' }, lineHeight: 1.1, letterSpacing: '-0.03em' }}>
-              Una experiencia inmersiva
+              Una experiencia deportiva inmersiva
             </Typography>
           </Box>
 
-          {/* Features as alternating left-right blocks */}
           <Box ref={featuresRef}>
             {features.map((f, i) => {
               const isLeft = i % 2 === 0;
@@ -147,7 +144,6 @@ export default function AboutSection() {
                     opacity: 0,
                   }}
                 >
-                  {/* Number + Icon side */}
                   <Box
                     sx={{
                       flex: '0 0 auto',
@@ -190,10 +186,8 @@ export default function AboutSection() {
                     </Box>
                   </Box>
 
-                  {/* Connector line (desktop only) */}
                   <Box sx={{ display: { xs: 'none', md: 'block' }, width: 80, height: 2, bgcolor: 'rgba(255,5,30,0.15)', flexShrink: 0 }} />
 
-                  {/* Text side */}
                   <Box sx={{ textAlign: { xs: 'center', md: isLeft ? 'left' : 'right' }, maxWidth: 420 }}>
                     <Typography sx={{ fontWeight: 700, fontSize: '1.3rem', color: '#1B1B1B', mb: 1, letterSpacing: '-0.01em' }}>
                       {f.title}

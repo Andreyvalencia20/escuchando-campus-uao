@@ -9,9 +9,8 @@ import zonesData from './data/zones.json';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import DeviceShowcase from './components/DeviceShowcase';
-import ZoneCards from './components/ZoneCards';
+import GymZoneSection from './components/GymZoneSection';
 import CampusMap from './components/CampusMap';
-import Map3DViewer from './components/Map3DViewer';
 import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
 import ZoneExplorer from './components/ZoneExplorer';
@@ -20,7 +19,10 @@ import CreditosPage from './pages/CreditosPage';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const zones: Zone[] = zonesData as Zone[];
+const allZones: Zone[] = zonesData as Zone[];
+
+// Solo mostramos el pin del gimnasio en el mapa
+const mapZones: Zone[] = allZones.filter((z) => z.id === 'gimnasio');
 
 const theme = createTheme({
   palette: {
@@ -43,7 +45,6 @@ function HomePage() {
 
   const [selectedZone, setSelectedZone] = useState<Zone | null>(null);
   const [mapFilter, setMapFilter] = useState<Category | null>(null);
-  const [mapMode, setMapMode] = useState<'2d' | '3d'>('2d');
 
   const scrollToSection = useCallback((section: string) => {
     const refMap: Record<string, React.RefObject<HTMLDivElement | null>> = {
@@ -100,14 +101,15 @@ function HomePage() {
         <HeroSection />
       </Box>
 
-      {/* Zone Cards */}
+      {/* Device showcase */}
       <DeviceShowcase />
 
+      {/* Zona del Gimnasio (única sección de áreas) */}
       <Box ref={zonesRef}>
-        <ZoneCards zones={zones} onZoneClick={handleZoneClick} />
+        <GymZoneSection onAreaClick={handleZoneClick} />
       </Box>
 
-      {/* Map section */}
+      {/* Mapa */}
       <Box ref={mapRef} sx={{ bgcolor: '#FFFFFF', py: { xs: 4, md: 6 } }}>
         <Container maxWidth="lg" sx={{ mb: 4 }}>
           <Box sx={{ textAlign: 'center' }}>
@@ -123,7 +125,7 @@ function HomePage() {
                 display: 'block',
               }}
             >
-              Recorrido virtual
+              Ubicación
             </Typography>
             <Typography
               className="reveal"
@@ -135,66 +137,17 @@ function HomePage() {
                 letterSpacing: '-0.03em',
               }}
             >
-              Mapa del Campus
+              Encuentra el Gimnasio
             </Typography>
-
-            {/* Toggle 2D / 3D */}
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3, gap: 0 }}>
-              <Box
-                onClick={() => setMapMode('2d')}
-                sx={{
-                  px: 3, py: 1,
-                  bgcolor: mapMode === '2d' ? '#FF051E' : 'rgba(0,0,0,0.05)',
-                  color: mapMode === '2d' ? '#fff' : '#1B1B1B',
-                  fontWeight: 600,
-                  fontSize: '0.85rem',
-                  borderRadius: '8px 0 0 8px',
-                  cursor: 'pointer',
-                  transition: 'all 200ms',
-                  border: '1px solid',
-                  borderColor: mapMode === '2d' ? '#FF051E' : 'rgba(0,0,0,0.12)',
-                  fontFamily: 'Inter, Roboto, sans-serif',
-                  '&:hover': { bgcolor: mapMode === '2d' ? '#ae002d' : 'rgba(0,0,0,0.08)' },
-                }}
-              >
-                Mapa 2D
-              </Box>
-              <Box
-                onClick={() => setMapMode('3d')}
-                sx={{
-                  px: 3, py: 1,
-                  bgcolor: mapMode === '3d' ? '#FF051E' : 'rgba(0,0,0,0.05)',
-                  color: mapMode === '3d' ? '#fff' : '#1B1B1B',
-                  fontWeight: 600,
-                  fontSize: '0.85rem',
-                  borderRadius: '0 8px 8px 0',
-                  cursor: 'pointer',
-                  transition: 'all 200ms',
-                  border: '1px solid',
-                  borderColor: mapMode === '3d' ? '#FF051E' : 'rgba(0,0,0,0.12)',
-                  borderLeft: 'none',
-                  fontFamily: 'Inter, Roboto, sans-serif',
-                  '&:hover': { bgcolor: mapMode === '3d' ? '#ae002d' : 'rgba(0,0,0,0.08)' },
-                }}
-              >
-                Mapa 3D
-              </Box>
-            </Box>
           </Box>
         </Container>
 
-        {mapMode === '2d' ? (
         <CampusMap
-          zones={zones}
+          zones={mapZones}
           filter={mapFilter}
           onFilterChange={handleFilterChange}
           onZoneClick={handleZoneClick}
         />
-        ) : (
-        <Container maxWidth="xl" sx={{ px: { xs: 0, md: 3 } }}>
-          <Map3DViewer />
-        </Container>
-        )}
       </Box>
 
       {/* About */}
@@ -202,10 +155,8 @@ function HomePage() {
         <AboutSection />
       </Box>
 
-      {/* Footer */}
       <Footer />
 
-      {/* Zone Explorer overlay */}
       {selectedZone && (
         <ZoneExplorer zone={selectedZone} onClose={handleCloseExplorer} />
       )}

@@ -17,6 +17,7 @@ export interface Zone {
   mapPosition: MapPosition;
   panoScene: string;
   hideGallery?: boolean;
+  tourBaseUrl?: string;
 }
 
 export const categoryLabels: Record<Category, string> = {

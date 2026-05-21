@@ -5,9 +5,9 @@ import gsap from 'gsap';
 
 
 const stats = [
-  { value: '6', label: 'Zonas' },
-  { value: '129', label: 'Panoramas 360°' },
-  { value: '6', label: 'Audios ambiente' },
+  { value: '7', label: 'Áreas deportivas' },
+  { value: '7', label: 'Panoramas 360°' },
+  { value: '1', label: 'Recorrido inmersivo' },
 ];
 
 const floatingCircleKeyframes = `
@@ -51,7 +51,6 @@ export default function HeroSection() {
           { x: 0, opacity: 1, duration: 1.1 },
           '-=0.6'
         );
-      // Stats counter animation
       const statElements = statsRef.current?.querySelectorAll('.stat-value');
       if (statElements) {
         statElements.forEach((el) => {
@@ -96,7 +95,6 @@ export default function HeroSection() {
           alignItems: 'center',
         }}
       >
-        {/* Background image */}
         <Box
           sx={{
             position: 'absolute',
@@ -109,7 +107,6 @@ export default function HeroSection() {
           }}
         />
 
-        {/* Red gradient overlay */}
         <Box
           sx={{
             position: 'absolute',
@@ -120,7 +117,6 @@ export default function HeroSection() {
           }}
         />
 
-        {/* Floating circles */}
         <Box
           sx={{
             position: 'absolute',
@@ -164,7 +160,6 @@ export default function HeroSection() {
           }}
         />
 
-        {/* Content */}
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 3, pb: 16, pt: 12 }}>
           <Box sx={{ textAlign: 'center', mx: 'auto' }}>
             <Typography
@@ -180,9 +175,9 @@ export default function HeroSection() {
                 opacity: 0,
               }}
             >
-              Explora el campus
+              Vive el deporte
               <br />
-              como nunca antes
+              en la UAO
             </Typography>
 
             <Typography
@@ -198,14 +193,14 @@ export default function HeroSection() {
                 opacity: 0,
               }}
             >
-              Recorrido virtual inmersivo con panoramas 360°, identidad sonora
-              y mapa interactivo de la Universidad Autónoma de Occidente.
+              Recorrido virtual inmersivo del centro deportivo de la Universidad
+              Autónoma de Occidente. Gimnasio, yoga, estiramiento y mucho más
+              en 360°.
             </Typography>
 
           </Box>
         </Container>
 
-        {/* Stats bar at bottom */}
         <Box
           ref={statsRef}
           sx={{

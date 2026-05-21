@@ -7,7 +7,7 @@ import {
   IconButton,
   Button,
 } from '@mui/material';
-import { HearingOutlined, Menu, Close } from '@mui/icons-material';
+import { FitnessCenterOutlined, Menu, Close } from '@mui/icons-material';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 interface HeaderProps {
@@ -15,7 +15,7 @@ interface HeaderProps {
 }
 
 const scrollNavLinks = [
-  { label: 'Zonas', section: 'zones' },
+  { label: 'Áreas', section: 'zones' },
   { label: 'Mapa', section: 'map' },
   { label: 'Proyecto', section: 'about' },
 ];
@@ -47,7 +47,6 @@ export default function Header({ onNavigate }: HeaderProps) {
       if (isHome) {
         onNavigate(section);
       } else {
-        // Navigate home first, then scroll after a brief delay
         navigate('/');
         setTimeout(() => {
           const el = document.querySelector(
@@ -56,7 +55,6 @@ export default function Header({ onNavigate }: HeaderProps) {
           if (el) {
             el.scrollIntoView({ behavior: 'smooth', block: 'start' });
           } else {
-            // Fallback: try the onNavigate approach
             onNavigate(section);
           }
         }, 300);
@@ -112,7 +110,6 @@ export default function Header({ onNavigate }: HeaderProps) {
             justifyContent="space-between"
             sx={{ height: 72 }}
           >
-            {/* Logo */}
             <Stack
               direction="row"
               alignItems="center"
@@ -131,7 +128,7 @@ export default function Header({ onNavigate }: HeaderProps) {
                   justifyContent: 'center',
                 }}
               >
-                <HearingOutlined sx={{ color: '#FFFFFF', fontSize: 22 }} />
+                <FitnessCenterOutlined sx={{ color: '#FFFFFF', fontSize: 22 }} />
               </Box>
               <Typography
                 sx={{
@@ -142,11 +139,10 @@ export default function Header({ onNavigate }: HeaderProps) {
                   letterSpacing: '-0.02em',
                 }}
               >
-                Campus UAO
+                Deporte UAO
               </Typography>
             </Stack>
 
-            {/* Desktop nav */}
             <Stack
               direction="row"
               spacing={1}
@@ -202,7 +198,6 @@ export default function Header({ onNavigate }: HeaderProps) {
               ))}
             </Stack>
 
-            {/* Mobile hamburger */}
             <IconButton
               onClick={() => setMobileOpen(true)}
               sx={{
@@ -217,7 +212,6 @@ export default function Header({ onNavigate }: HeaderProps) {
         </Container>
       </Box>
 
-      {/* Mobile fullscreen overlay */}
       <Box
         sx={{
           position: 'fixed',

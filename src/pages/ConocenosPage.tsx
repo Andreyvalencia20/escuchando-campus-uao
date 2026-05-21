@@ -31,25 +31,25 @@ const techStack = [
     description: 'Motor de animaciones de alto rendimiento para la web.',
   },
   {
-    name: 'krpano',
-    description: 'Visor de panoramas 360° de alta calidad.',
+    name: 'Marzipano',
+    description: 'Visor de panoramas 360° de código abierto.',
   },
   {
-    name: 'Freesound',
-    description: 'Biblioteca colaborativa de audio ambiente con licencia CC.',
+    name: 'model-viewer',
+    description: 'Web component de Google para visualizar modelos 3D (GLB).',
   },
   {
-    name: 'Unsplash',
-    description: 'Fotografías de alta calidad con licencia libre.',
+    name: 'react-zoom-pan-pinch',
+    description: 'Zoom y paneo interactivo para el mapa 2D del campus.',
   },
 ];
 
 const teamMembers = [
-  { name: 'Laura Valentina Henao Torres', initials: 'LH', color: '#FF051E' },
-  { name: 'Juan David Mu\u00f1oz Sanchez', initials: 'JM', color: '#ae002d' },
-  { name: 'Gabriela Reyes Urbina', initials: 'GR', color: '#79102D' },
-  { name: 'Andrey Daniel Valencia Samboni', initials: 'AV', color: '#1B1B1B' },
-  { name: 'Sebastian Fernandez Gomez', initials: 'SF', color: '#FF051E' },
+  { name: 'Sebastián Fernández Gómez', initials: 'SF', color: '#FF051E' },
+  { name: 'Laura Valentina Henao Torres', initials: 'LH', color: '#ae002d' },
+  { name: 'Juan David Muñoz Sanchez', initials: 'JM', color: '#79102D' },
+  { name: 'Andrey Daniel Valencia Samboní', initials: 'AV', color: '#1B1B1B' },
+  { name: 'Alejandro Rivera Tovar', initials: 'AR', color: '#FF051E' },
 ];
 
 export default function ConocenosPage() {
@@ -67,7 +67,6 @@ export default function ConocenosPage() {
 
   useGSAP(
     () => {
-      // Section 1 - title from left, text fade up
       if (section1Ref.current) {
         gsap.from(section1Ref.current.querySelector('.section-title'), {
           x: -120,
@@ -94,7 +93,6 @@ export default function ConocenosPage() {
         });
       }
 
-      // Section 2 - title from right, text fade up
       if (section2Ref.current) {
         gsap.from(section2Ref.current.querySelector('.section-title'), {
           x: 120,
@@ -121,7 +119,6 @@ export default function ConocenosPage() {
         });
       }
 
-      // Section 3 - tech items stagger
       if (section3Ref.current) {
         gsap.from(section3Ref.current.querySelector('.section-title'), {
           x: -120,
@@ -149,7 +146,6 @@ export default function ConocenosPage() {
         });
       }
 
-      // Section 4 - team members stagger
       if (section4Ref.current) {
         gsap.from(section4Ref.current.querySelector('.section-title'), {
           x: 120,
@@ -195,7 +191,6 @@ export default function ConocenosPage() {
 
   return (
     <Box ref={containerRef} sx={{ bgcolor: '#FAFAFA', minHeight: '100vh' }}>
-      {/* Top bar */}
       <Box
         sx={{
           position: 'fixed',
@@ -238,10 +233,8 @@ export default function ConocenosPage() {
         </Container>
       </Box>
 
-      {/* Spacer for fixed header */}
       <Box sx={{ height: 72 }} />
 
-      {/* Hero area */}
       <Box
         sx={{
           pt: { xs: 8, md: 14 },
@@ -260,7 +253,7 @@ export default function ConocenosPage() {
               mb: 2,
             }}
           >
-            Escuchando el Campus UAO
+            Vive el deporte en la UAO
           </Typography>
           <Box
             sx={{
@@ -274,7 +267,6 @@ export default function ConocenosPage() {
         </Container>
       </Box>
 
-      {/* Section 01 - Acerca del recorrido */}
       <Box id="acerca-del-recorrido"
         ref={section1Ref}
         sx={{
@@ -307,17 +299,16 @@ export default function ConocenosPage() {
               maxWidth: 720,
             }}
           >
-            Escuchando el Campus UAO es una experiencia web multimedia que permite
-            explorar la identidad sonora y visual de la Universidad Autónoma
-            de Occidente. A través de recorridos 360°,
-            fotografías y grabaciones de audio ambiente, el usuario puede
-            sumergirse en los espacios más representativos del campus sin
-            estar físicamente en él.
+            Vive el deporte en la UAO es una experiencia web multimedia que
+            permite explorar el centro deportivo y de bienestar de la
+            Universidad Autónoma de Occidente. A través de recorridos 360°
+            inmersivos por el gimnasio, salón de yoga, sala de estiramiento,
+            casilleros y zonas de descanso, el usuario puede conocer cada
+            espacio sin estar físicamente allí.
           </Typography>
         </Container>
       </Box>
 
-      {/* Section 02 - Metodología */}
       <Box id="metodologia"
         ref={section2Ref}
         sx={{
@@ -355,19 +346,18 @@ export default function ConocenosPage() {
                 maxWidth: 720,
               }}
             >
-              El proyecto se desarrolló siguiendo la metodología de
-              diseño de Sistemas Multimedia, integrando elementos de audio,
-              imagen y navegación interactiva. Se utilizó un archivo
-              JSON como fuente de datos estructurados, eliminando la necesidad de un
-              backend o interfaz de administración. El diseño se
-              basó en Material Design con fuentes light, iconografía
-              de líneas y los colores institucionales de la UAO.
+              El proyecto se desarrolló siguiendo la metodología de diseño de
+              Sistemas Multimedia, integrando captura fotográfica 360°,
+              modelado 3D del campus y navegación interactiva. Los recorridos
+              panorámicos se generaron con Marzipano y se sirven como
+              contenido estático junto a la aplicación React. El diseño se
+              basa en Material Design con tipografía Inter, iconografía
+              outlined y los colores institucionales de la UAO.
             </Typography>
           </Box>
         </Container>
       </Box>
 
-      {/* Section 03 - Tecnologías utilizadas */}
       <Box id="tecnologias"
         ref={section3Ref}
         sx={{
@@ -392,7 +382,6 @@ export default function ConocenosPage() {
             Tecnologías utilizadas
           </Typography>
 
-          {/* Horizontal scrolling tech row */}
           <Box
             ref={techRowRef}
             sx={{
@@ -458,7 +447,6 @@ export default function ConocenosPage() {
         </Container>
       </Box>
 
-      {/* Section 04 - Equipo de trabajo */}
       <Box id="equipo-de-trabajo"
         ref={section4Ref}
         sx={{

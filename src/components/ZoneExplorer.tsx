@@ -62,7 +62,7 @@ export default function ZoneExplorer({ zone, onClose }: ZoneExplorerProps) {
   const color = categoryColors[zone.category];
   const hasGallery = !zone.hideGallery && ((zone.images && zone.images.length > 0) || (zone.videos && zone.videos.length > 0));
   const hasAudio = zone.audio && zone.audio.length > 0;
-  const tour360Url = `/uao-360/?startscene=${zone.panoScene}&v=3`;
+  const tour360Url = `${zone.tourBaseUrl || '/uao-360/'}?startscene=${zone.panoScene}&v=3`;
 
   return (
     <Fade in timeout={300}>

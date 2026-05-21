@@ -45,7 +45,6 @@ export default function DeviceShowcase() {
       }}
     >
       <Container maxWidth="lg">
-        {/* Title */}
         <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 8 } }}>
           <Typography sx={{
             color: '#FF051E', fontWeight: 700, fontSize: '0.72rem',
@@ -58,17 +57,16 @@ export default function DeviceShowcase() {
             fontSize: { xs: '1.8rem', md: '2.8rem' },
             lineHeight: 1.1, letterSpacing: '-0.03em', mb: 2,
           }}>
-            Una experiencia en cada pantalla
+            Entrena tu mirada en cada pantalla
           </Typography>
           <Typography sx={{
             color: 'rgba(255,255,255,0.45)', fontWeight: 300,
             maxWidth: 480, mx: 'auto', fontSize: '0.95rem', lineHeight: 1.7,
           }}>
-            Navega desde cualquier dispositivo con la misma calidad visual
+            Explora el centro deportivo desde cualquier dispositivo con la misma calidad visual
           </Typography>
         </Box>
 
-        {/* Devices */}
         <Box sx={{
           display: 'flex',
           alignItems: 'flex-end',
@@ -78,7 +76,6 @@ export default function DeviceShowcase() {
           transformStyle: 'preserve-3d',
         }}>
 
-          {/* Phone */}
           <Box
             className="device"
             sx={{
@@ -99,7 +96,6 @@ export default function DeviceShowcase() {
               position: 'relative',
               boxShadow: '0 20px 60px rgba(255,5,30,0.15), 0 0 0 1px rgba(255,255,255,0.05)',
             }}>
-              {/* Notch */}
               <Box sx={{
                 position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
                 width: 60, height: 20, bgcolor: '#111', borderRadius: '0 0 12px 12px', zIndex: 2,
@@ -107,7 +103,7 @@ export default function DeviceShowcase() {
               {visible && (
                 <iframe
                   src="/"
-                  title="Vista m\u00f3vil"
+                  title="Vista móvil"
                   style={{ width: '375px', height: '750px', border: 'none', transform: 'scale(0.48)', transformOrigin: '0 0' }}
                 />
               )}
@@ -120,7 +116,6 @@ export default function DeviceShowcase() {
             </Typography>
           </Box>
 
-          {/* Desktop (center, larger) */}
           <Box
             className="device"
             sx={{
@@ -148,7 +143,6 @@ export default function DeviceShowcase() {
                 />
               )}
             </Box>
-            {/* Stand */}
             <Box sx={{
               width: { xs: 120, md: 160 }, height: 4,
               bgcolor: '#333', mx: 'auto', borderRadius: '0 0 4px 4px',
@@ -166,7 +160,6 @@ export default function DeviceShowcase() {
             </Typography>
           </Box>
 
-          {/* Tablet */}
           <Box
             className="device"
             sx={{

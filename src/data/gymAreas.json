@@ -1,0 +1,93 @@
+[
+  {
+    "id": "gym-entrada",
+    "name": "Entrada",
+    "category": "deportivo",
+    "description": "Acceso principal a la zona del gimnasio. Aquí inicia el recorrido por los distintos espacios deportivos y de bienestar del campus.",
+    "images": [],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": { "x": 3400, "y": 1100 },
+    "panoScene": "4-entrada",
+    "hideGallery": true,
+    "tourBaseUrl": "/gym-tour/"
+  },
+  {
+    "id": "gym-camino",
+    "name": "Camino",
+    "category": "deportivo",
+    "description": "Sendero que conecta los espacios de la zona deportiva, rodeado del ambiente característico del campus.",
+    "images": [],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": { "x": 3400, "y": 1100 },
+    "panoScene": "5-camino",
+    "hideGallery": true,
+    "tourBaseUrl": "/gym-tour/"
+  },
+  {
+    "id": "gym-casilleros",
+    "name": "Casilleros",
+    "category": "deportivo",
+    "description": "Zona de casilleros para guardar pertenencias antes de iniciar tu entrenamiento.",
+    "images": [],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": { "x": 3400, "y": 1100 },
+    "panoScene": "6-casilleros",
+    "hideGallery": true,
+    "tourBaseUrl": "/gym-tour/"
+  },
+  {
+    "id": "gym-gym",
+    "name": "Gimnasio",
+    "category": "deportivo",
+    "description": "Sala principal del gimnasio con máquinas y equipos para entrenamiento de fuerza y resistencia.",
+    "images": [],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": { "x": 3400, "y": 1100 },
+    "panoScene": "2-gym",
+    "hideGallery": true,
+    "tourBaseUrl": "/gym-tour/"
+  },
+  {
+    "id": "gym-estiramiento",
+    "name": "Sala de Estiramiento",
+    "category": "deportivo",
+    "description": "Espacio dedicado al calentamiento, estiramiento y recuperación. Un área tranquila para preparar y cuidar el cuerpo.",
+    "images": [],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": { "x": 3400, "y": 1100 },
+    "panoScene": "0-sala-de-estiramiento",
+    "hideGallery": true,
+    "tourBaseUrl": "/gym-tour/"
+  },
+  {
+    "id": "gym-yoga",
+    "name": "Salón de Yoga",
+    "category": "deportivo",
+    "description": "Salón amplio y silencioso para clases de yoga, pilates y prácticas de bienestar mental.",
+    "images": [],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": { "x": 3400, "y": 1100 },
+    "panoScene": "1-salon-de-yoga",
+    "hideGallery": true,
+    "tourBaseUrl": "/gym-tour/"
+  },
+  {
+    "id": "gym-mesas",
+    "name": "Mesas",
+    "category": "deportivo",
+    "description": "Zona de mesas para juegos de mesa, descanso y socialización entre los espacios deportivos.",
+    "images": [],
+    "audio": "",
+    "audioDescription": "",
+    "mapPosition": { "x": 3400, "y": 1100 },
+    "panoScene": "3-mesas",
+    "hideGallery": true,
+    "tourBaseUrl": "/gym-tour/"
+  }
+]
