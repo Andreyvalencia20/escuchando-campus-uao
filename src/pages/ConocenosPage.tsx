@@ -35,10 +35,6 @@ const techStack = [
     description: 'Visor de panoramas 360° de código abierto.',
   },
   {
-    name: 'model-viewer',
-    description: 'Web component de Google para visualizar modelos 3D (GLB).',
-  },
-  {
     name: 'react-zoom-pan-pinch',
     description: 'Zoom y paneo interactivo para el mapa 2D del campus.',
   },
@@ -347,11 +343,11 @@ export default function ConocenosPage() {
               }}
             >
               El proyecto se desarrolló siguiendo la metodología de diseño de
-              Sistemas Multimedia, integrando captura fotográfica 360°,
-              modelado 3D del campus y navegación interactiva. Los recorridos
-              panorámicos se generaron con Marzipano y se sirven como
-              contenido estático junto a la aplicación React. El diseño se
-              basa en Material Design con tipografía Inter, iconografía
+              Sistemas Multimedia, integrando captura fotográfica 360° y
+              navegación interactiva sobre un mapa 2D del campus. Los
+              recorridos panorámicos se generaron con Marzipano y se sirven
+              como contenido estático junto a la aplicación React. El diseño
+              se basa en Material Design con tipografía Inter, iconografía
               outlined y los colores institucionales de la UAO.
             </Typography>
           </Box>

@@ -14,7 +14,6 @@ const openSourceTechs = [
   { name: 'Material UI', note: 'MUI SAS — Licencia MIT' },
   { name: 'GSAP', note: 'GreenSock, Inc. — Licencia propietaria con uso gratuito' },
   { name: 'Marzipano', note: 'Google, Inc. — Apache License 2.0' },
-  { name: 'model-viewer', note: 'Google, Inc. — Apache License 2.0' },
   { name: 'Vite', note: 'Evan You — Licencia MIT' },
 ];
 
@@ -172,14 +171,6 @@ export default function CreditosPage() {
               </Typography>
               <Typography sx={{ fontSize: '1.05rem', color: 'rgba(27,27,27,0.6)', lineHeight: 1.7 }}>
                 Capturados in situ en el centro deportivo de la UAO y procesados con la herramienta Marzipano Tool.
-              </Typography>
-            </Box>
-            <Box className="credit-item">
-              <Typography sx={{ fontWeight: 700, fontSize: '1.15rem', color: '#1B1B1B', mb: 0.5 }}>
-                Modelo 3D del campus
-              </Typography>
-              <Typography sx={{ fontSize: '1.05rem', color: 'rgba(27,27,27,0.6)', lineHeight: 1.7 }}>
-                Modelo en formato GLB visualizado con model-viewer de Google.
               </Typography>
             </Box>
             <Box className="credit-item">

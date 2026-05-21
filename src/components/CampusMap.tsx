@@ -26,8 +26,8 @@ const pinBounceKeyframes = `
 
 export default function CampusMap({
   zones,
-  filter,
-  onFilterChange,
+  filter: _filter,
+  onFilterChange: _onFilterChange,
   onZoneClick,
 }: CampusMapProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -66,9 +66,7 @@ export default function CampusMap({
     return cluster && cluster.length > 1;
   };
 
-  const filteredZones = filter
-    ? zones.filter((z) => z.category === filter)
-    : zones;
+  const filteredZones = zones;
 
   useGSAP(
     () => {
@@ -98,54 +96,29 @@ export default function CampusMap({
     { scope: sectionRef }
   );
 
-  const filterCategories: Array<{ key: Category | 'todas'; label: string }> = [
-    { key: 'todas', label: 'Todas' },
-    { key: 'academico', label: 'Académico' },
-    { key: 'recreativo', label: 'Recreativo' },
-    { key: 'social', label: 'Social' },
-    { key: 'deportivo', label: 'Deportivo' },
-  ];
-
   return (
     <>
       <style>{pinBounceKeyframes}</style>
       <Box ref={sectionRef} sx={{ py: { xs: 6, md: 10 } }}>
         <Container maxWidth="lg">
-          {/* Filter chips */}
+          {/* Single category label */}
           <Stack
             direction="row"
-            spacing={1.5}
             justifyContent="center"
-            flexWrap="wrap"
-            sx={{ mb: 4, gap: 1 }}
+            sx={{ mb: 4 }}
           >
-            {filterCategories.map((opt) => {
-              const isActive =
-                (opt.key === 'todas' && filter === null) ||
-                opt.key === filter;
-              return (
-                <Chip
-                  key={opt.key}
-                  label={opt.label}
-                  onClick={() =>
-                    onFilterChange(opt.key === 'todas' ? null : (opt.key as Category))
-                  }
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: '0.85rem',
-                    px: 1,
-                    py: 2.2,
-                    borderRadius: '50px',
-                    bgcolor: isActive ? '#FF051E' : 'rgba(0,0,0,0.06)',
-                    color: isActive ? '#FFFFFF' : '#1B1B1B',
-                    '&:hover': {
-                      bgcolor: isActive ? '#ae002d' : 'rgba(0,0,0,0.1)',
-                    },
-                    transition: 'all 0.3s ease',
-                  }}
-                />
-              );
-            })}
+            <Chip
+              label="Gimnasio"
+              sx={{
+                fontWeight: 600,
+                fontSize: '0.85rem',
+                px: 1,
+                py: 2.2,
+                borderRadius: '50px',
+                bgcolor: '#FF051E',
+                color: '#FFFFFF',
+              }}
+            />
           </Stack>
 
           {/* 3D perspective map container */}
